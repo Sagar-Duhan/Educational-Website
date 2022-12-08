@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    --pacific-blue: #38AECC;
+    --light-white: #aaa;
+    --white: #fff;
+    --blue-saphire:#046E8F;
+    --prussian-blue:#183446;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+ }
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+body{
+    background-color: var(--prussian-blue);
+}
+
+section{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:2rem;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background-color: var(--blue-saphire);
+}
+ 
+.header .flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.header .flex .logo{
+    font-size: 2.5rem;
+    color:var(--white);
+}
+ 
+.header .flex .navbar a{
+    margin-left: 2rem;
+    color:var(--white);
+    font-size: 2rem;
+    
+}
+ 
+.header .flex .navbar a:hover{
+    color:var(--pacific-blue);
+}
+
+.home{
+    margin-top: 6rem;
+}
+ 
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap:1.5rem;
+}
+ 
+.home .row .content{
+    flex:1 1 40rem;
+    text-align: center;
+}
+ 
+.home .row .image{
+    flex:1 1 40rem;
+}
+ 
+.home .row .image img{
+    width: 100%;
+
+}
+ 
+.home .row .content h3{
+    margin-bottom: 1rem;
+    font-size: 8.5rem;
+    color:var(--white);
+    line-height: 1;
+    
+}
+ 
+.home .row .content h3 span{
+    color:var(--pacific-blue);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: var(--blue-saphire);
+    cursor: pointer;
+    color:var(--white);
+    font-size: 1.8rem;
+    padding:1rem 3rem;
+}
+ 
+.btn:hover{
+    background-color: var(--white);
+    color:var(--prussian-blue);
+}
+
+.count .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+}
+ 
+.count .box-container .box{
+    background-color: var(--blue-saphire);
+    border-radius: 5.5rem;
+    border-style: dotted;
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2.5rem;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+ 
+.count .box-container .box i{
+    font-size: 5rem;
+    color:var(--pacific-blue);
+}
+ 
+.count .box-container .box .content h3{
+    font-size: 2rem;
+    color:var(--white);
+    margin-bottom: .5rem;
+}
+ 
+.count .box-container .box .content p{
+    font-size: 1.6rem;
+    color:var(--white);
+} 
+ 
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+ 
+.about .row .image{
+    flex:1 1 40rem;
+}
+ 
+.about .row .image img{
+    width: 100%;
+}
+ 
+.about .row .content{
+    text-align: center;
+    flex:1 1 40rem;
+}
+ 
+.about .row .content h3{
+    font-size: 3rem;
+    color:var(--white);
+}
+ 
+.about .row .content p{
+    padding:1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color:var(--white);
+    text-align: center;
+}
+
+.heading{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+    color:var(--white);
+    text-transform: uppercase;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+ }
+ 
+ .contact .row .image{
+    flex: 1 1 40rem;
+ }
+ 
+ .contact .row .image img{
+    width: 100%;
+ }
+ 
+ .contact .row form{
+    flex:1 1 40rem;
+ }
+ 
+ .contact .row form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--blue-saphire);
+    font-size: 1.8rem;
+    color:var(--white);
+    padding:1.4rem;
+    text-transform: none;
+ }
+ 
+ .contact .row form span{
+    font-size: 1.6rem;
+    color:var(--white);
+ }
+ 
+ .contact .row form .radio{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+ }
+ 
+ .contact .row form .radio label{
+    font-size: 1.6rem;
+    color:var(--white);
+    margin-left: .5rem;
+    cursor: pointer;
+ }
+ 
+ .contact .row form .radio #female{
+    margin-left: 2rem;
+ }
+ 
+ .contact .row form .radio input{
+    
+
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--white);
+    cursor: pointer;
+ }
+
+ .footer{
+    background-color: var(--blue-saphire);
+    text-align: center;
+    /* padding-bottom: 7rem; */
+ }
+ 
+ .footer .share a{
+    margin:0 .3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color:var(--white);
+    background-color: var(--prussian-blue);;
+ }
+ 
+ .footer .share a:hover{
+    background-color: var(--pacific-blue);
+ }
+ 
+ .footer .credit{
+    margin-top: 2.5rem;
+    padding:1.5rem;
+    padding-top: 2.5rem;
+    border-top: .1rem solid var(--white);
+    font-size: 2rem;
+    color:var(--white);
+ }
+ 
+ .footer .credit span{
+    color:var(--pacific-blue);
+ }
+ 
+div.grid-container 
+{ 
+display: grid; 
+grid-template-columns: auto auto auto auto auto auto auto auto;
+grid-template-rows: auto auto auto auto auto auto auto auto auto;
+margin-top: 5%;
+
+} 
+ 
+div.grid-item 
+{ 
+font-size: 2rem; 
+text-align: center;
+color: var(--white);
+border: 2px dotted black;
+border-radius: 10%;
+margin-bottom: 8%;
+background-color: var(--blue-saphire);
+}
+
+.grid-container .grid-item img
+{
+    width: 250px;
+    height: 250px;
+}
+
+.grid-container .grid-item:hover
+{
+    transform: scale(1.5);
+}
+
+/* Teachers Image CSS */
+
+div.grid-container1
+{ 
+display: grid; 
+grid-template-columns: auto auto auto auto auto auto auto auto;
+grid-template-rows: auto auto auto auto auto auto auto auto auto;
+margin-top: 5%;
+
+} 
+ 
+div.grid-item1 
+{ 
+font-size: 2rem; 
+text-align: center;
+color: var(--white);
+border: 2px dotted black;
+border-radius: 10%;
+margin-bottom: 8%;
+background-color: var(--blue-saphire);
+}
+
+.grid-container1 .grid-item1 p
+{
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: var(--white);
+}
+
+.grid-container1 .grid-item1 img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    margin-top: 5%;
+}
+
+.grid-container1 .grid-item1:hover
+{
+    transform: scale(1.5);
+}
+
